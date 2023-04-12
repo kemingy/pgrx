@@ -746,6 +746,7 @@ fn run_bindgen(
         .derive_hash(false)
         .derive_ord(false)
         .derive_partialord(false)
+        .newtype_enum("pg_enc")
         .layout_tests(false)
         .generate()
         .wrap_err_with(|| format!("Unable to generate bindings for pg{}", major_version))?;
